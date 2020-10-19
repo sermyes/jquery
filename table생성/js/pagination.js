@@ -44,5 +44,5 @@ $(document).ready(function(){
         numbers.find('li a').removeClass('active');
         $(this).addClass('active');
         displayRows($(this).text());
-    }) 
+    })  
 });
