@@ -1,0 +1,3 @@
+<h1> AJAX is not a programming language. </h1>
+
+<p> AJAX is a technique for accessing web servers from a web page.</p>
