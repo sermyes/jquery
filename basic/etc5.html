@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etc5 - gallery (함수로 구조분리)</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/etc5.js"></script>
+    <style>
+        .imgContainerCustom{
+            position: relative;
+        }
+        .imgContainerCustom li{
+            position: absolute; left: 0; top: 0;
+            transition: all 0.5s ease-in-out;
+            display: inline-block;
+        }
+        .imgContainerCustom li img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="imgContainerCustom">
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+    </ul>
+    <button class="alignMix">정렬!</button>
+    <button class="resetMix">원위치!</button>
+</body>
+</html>

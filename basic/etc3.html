@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etc3 - tab과 custom input</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/etc3.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> 
+      <!-- CDN방식은 ctrl+클릭으로 제대로 가져왔는지 확인한다. -->
+    <style>
+        /* exp.1 style */
+        .cp span{
+            display: inline-block; vertical-align: middle;
+            line-height: 15px;
+        }
+        .cp .label{
+            cursor: pointer;
+        }
+        .cp .checkSpan{
+            /* material-icons가 제거되었을 떄, class="checkSpan"상태. */
+            text-indent: -9999px;
+        }
+        .cp .checkSpan.material-icons{ 
+            /* material-icons가 추가되었을 때, class="checkSpan material-icons"상태. */
+            text-indent: 0;
+        }
+
+         /* exp.2 style */
+         .tabMenu{
+            display: flex;
+            flex-flow: row nowrap;
+            padding:0;
+        }
+        .tabMenu li{
+            width: 33.33%;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border:1px solid black;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .tabMenu li.activated{
+            background-color: white;
+            color: black;
+        }
+        .tabPage{
+            display: none;
+            border:1px solid black;
+            padding: 20px;
+
+        }
+        .tabPage.activated{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- ! flex 사용법
+
+         ! flex 대상의 바로위 부모에 설정
+         * display: flex;
+         ? 배치되어야하는 컨텐츠 바로 위 부모에게 flex를 넣는다.
+         * flex-flow: row nowrap;
+         ? flex-direction: 좌에서 우로배치 row 
+         ? flex-wrap: nowrap , wrap은 넘어가면 아래로 떨군다. 
+         
+         ! flex 자식에게 설정   
+         * flex: 1 0 19.1%;
+         ? grow팽창, shrink수축 (0은 원래사이즈에서 고정), basis(size)제한값    
+    !-->
+
+    <!-- *exp.1 toggle -->
+    <div class="cp checkBox"> 
+        <!-- cp(component) -->
+        <span class="checkSpan material-icons">
+            done
+        </span>
+        <span class="label">click!!!</span>
+    </div>
+
+    <!-- *exp.2 tabPage 만들기 -->
+    <ul class="tabMenu">
+        <li data-tabNumb="tab1" class="activated">tab1</li>
+        <li data-tabNumb="tab2">tab2</li>
+        <li data-tabNumb="tab3">tab3</li>
+        <!-- data- 사용자 정의속성, id값과 일치시킨다. -->
+    </ul>
+    <div id="tab1" class="tabPage activated">tabpage1</div>
+    <div id="tab2" class="tabPage">tabpage2</div>
+    <div id="tab3" class="tabPage">tabpage3</div>
+</body>
+</html>

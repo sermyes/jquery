@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>etc6 - 갤러리(함수로구조분리2)</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/etc6.js"></script>
+    <style>
+        *{margin:0; padding:0;}
+        #imgContainer{
+            position:relative;
+        }
+        #imgContainer li{
+            position:absolute; list-style: none;
+            transition: all 0.75s ease-in-out;
+        }
+        #imgContainer li img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="start">재정렬</button>
+    <button class="reset">초기화</button>
+    <ul id="imgContainer">
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+        <li>
+            <img src="https://via.placeholder.com/100" alt="exImg">
+        </li>
+    </ul>
+</body>
+</html>
