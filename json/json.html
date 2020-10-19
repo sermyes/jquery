@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+<body>
+    <script>
+        // object to json
+        const rabbit = {
+            name: 'tori',
+            color: 'white',
+            size: null,
+            birthDate: new Date(),
+            jump: () => {
+                console.log(`${name} can jump!`);
+            },
+        };
+
+        json = JSON.stringify(rabbit);
+        console.log(json);
+
+        json1 = JSON.stringify(rabbit, ['name', 'birthDate']);
+        console.log(json1);
+
+        json2 = JSON.stringify(rabbit, (key, value) => {
+            console.log(`key: ${key}, value: ${value}`);
+            return (key == 'name') ? undefined : value;
+            // key를 제외한 나머지 변환. undefined는 제외시킬 때 사용.
+        });
+        console.log('json2 : ' + json2);
+
+        json3 = JSON.stringify(rabbit, (key, value) => {
+            console.log(`key: ${key}, value: ${value}`);
+            return (value == 'white') ? undefined : value;
+            // key를 제외한 나머지 변환. undefined는 제외시킬 때 사용.
+        });
+        console.log('json3 : ' + json3);
+
+        // json to object
+        const obj = JSON.parse(json, (key, value) => {
+            return (key == 'birthDate') ? new Date(value) : value;
+        });
+        console.log(obj.birthDate.getMonth());
+
+    </script>
+</body>
+</html>
